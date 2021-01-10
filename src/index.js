@@ -14,10 +14,11 @@ app.get("/", (req, res) => {
 });
 
 app.post("/webhook", (request, response) => {
+  console.log("** calling webhook...");
+  console.log(`webhook get called. body`, JSON.stringify(request.body));
   let tag = request.body.fulfillmentInfo.tag;
   let jsonResponse = {};
   if (tag != "welcome tag") {
-    //fulfillment response to be sent to the agent if the request tag is equal to "welcome tag"
     jsonResponse = {
       fulfillment_response: {
         messages: [
@@ -47,6 +48,8 @@ app.post("/webhook", (request, response) => {
       }
     };
   }
+
+  console.log("** called webhook **");
   response.json(jsonResponse);
 });
 
