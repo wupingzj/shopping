@@ -25,7 +25,11 @@ app.post("/webhook", (req, res) => {
     let product = parameters.product.original;
     let store = parameters.store.original;
     let count = randomInt(1, 100); // dummy stock availability
+
+    console.log("**** product", product);
+    console.log("**** store", store);
     let countedProduct = pluralize(product, count, true);
+    console.log("**** countedProduct", countedProduct);
 
     jsonResponse = {
       fulfillment_response: {
