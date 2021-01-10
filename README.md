@@ -1,3 +1,5 @@
 # shopping
 
-initial commit
+To run the server:
+
+npm run start
