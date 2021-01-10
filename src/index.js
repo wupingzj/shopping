@@ -21,16 +21,20 @@ app.post("/webhook", (req, res) => {
   let tag = req.body.fulfillmentInfo.tag;
   let jsonResponse = {};
   if (tag == CHECK_PRODUCT_AVAILABILITY) {
+    let product = parameters.product.original;
+    let store = parameters.store.original;
+    let count = randomInt(1, 100); // dummy stock availability
+
     jsonResponse = {
       fulfillment_response: {
         messages: [
           {
             text: {
-              text: ["Hi! This is a webhook response"]
-            },
+              text: [
+                `Thanks, we have ${count} ${product} in stock at ${store}. 
 
-            payload: {
-              volume: 20
+              Was there anything else I can help you with?`
+              ]
             }
           }
         ]
@@ -62,3 +66,8 @@ app.post("/webhook", (req, res) => {
 app.listen(port, () => {
   console.log(`server started at http://localhost:${port}`);
 });
+
+function randomInt(min, max) {
+  // min and max included
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
