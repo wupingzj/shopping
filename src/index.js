@@ -1,4 +1,5 @@
 const port = process.env.PORT || 8080;
+const CHECK_PRODUCT_AVAILABILITY = "checkProductAvailability";
 
 const express = require("express");
 const app = express();
@@ -7,25 +8,29 @@ const bodyParser = require("body-parser");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-// define a route handler for the default home page
 app.get("/", (req, res) => {
   console.log(`serving / ...`);
   res.send("Hello world! v1.2");
 });
 
-app.post("/webhook", (request, response) => {
+app.post("/webhook", (req, res) => {
   console.log("** calling webhook...");
-  console.log(`webhook get called. body`, JSON.stringify(request.body));
-  let tag = request.body.fulfillmentInfo.tag;
+  console.log(`webhook get called. body`, JSON.stringify(req.body));
+  let parameters = req.body.sessionInfo.parameters;
+  console.log("*** name=", parameters.name);
+  let tag = req.body.fulfillmentInfo.tag;
   let jsonResponse = {};
-  if (tag != "welcome tag") {
+  if (tag == CHECK_PRODUCT_AVAILABILITY) {
     jsonResponse = {
       fulfillment_response: {
         messages: [
           {
             text: {
-              //fulfillment text response to be sent to the agent
               text: ["Hi! This is a webhook response"]
+            },
+
+            payload: {
+              volume: 20
             }
           }
         ]
@@ -50,7 +55,7 @@ app.post("/webhook", (request, response) => {
   }
 
   console.log("** called webhook **");
-  response.json(jsonResponse);
+  res.json(jsonResponse);
 });
 
 // start the Express server

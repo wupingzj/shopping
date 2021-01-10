@@ -1,0 +1,46 @@
+{
+  "detectIntentResponseId": "c0bf81a2-184c-4a95-855e-f7d168091cac",
+  "pageInfo": {
+    "currentPage": "projects/sodium-pathway-245607/locations/australia-southeast1/agents/e40f8920-76fa-4497-b25f-ee9eb4ef9b5b/flows/00000000-0000-0000-0000-000000000000/pages/3884a94c-7ddb-4779-b5f5-1e20f804fa76"
+  },
+  "sessionInfo": {
+    "session": "projects/sodium-pathway-245607/locations/australia-southeast1/agents/e40f8920-76fa-4497-b25f-ee9eb4ef9b5b/sessions/886fb7-451-b27-a7d-7ab29c54c",
+    "parameters": {
+      "name": [
+        "John"
+      ],
+      "nameProvided": "Y",
+      "product": {
+        "original": "apples"
+      },
+      "store": {
+        "original": "surry hills"
+      }
+    }
+  },
+  "fulfillmentInfo": {
+    "tag": "checkProductAvailability"
+  },
+  "messages": [
+    {
+      "text": {
+        "text": [
+          "Hi! This is a webhook response"
+        ],
+        "redactedText": [
+          "Hi! This is a webhook response"
+        ]
+      }
+    },
+    {
+      "text": {
+        "text": [
+          "Thanks, we have 30 apples in stock at surry hills store. \n\nWas there anything else I can help you with?"
+        ],
+        "redactedText": [
+          "Thanks, we have 30 apples in stock at surry hills store. \n\nWas there anything else I can help you with?"
+        ]
+      }
+    }
+  ]
+}

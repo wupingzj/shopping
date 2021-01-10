@@ -1,0 +1,36 @@
+{
+  "detectIntentResponseId": "b87955dc-d8fb-4186-a9c7-28121b6f4592",
+  "pageInfo": {
+    "currentPage": "projects/sodium-pathway-245607/locations/australia-southeast1/agents/e40f8920-76fa-4497-b25f-ee9eb4ef9b5b/flows/00000000-0000-0000-0000-000000000000/pages/3884a94c-7ddb-4779-b5f5-1e20f804fa76"
+  },
+  "sessionInfo": {
+    "session": "projects/sodium-pathway-245607/locations/australia-southeast1/agents/e40f8920-76fa-4497-b25f-ee9eb4ef9b5b/sessions/1f8811-680-e15-9a0-88ac119c4",
+    "parameters": {
+      "name": [
+        "alex"
+      ],
+      "nameProvided": "Y",
+      "product": {
+        "original": "apple"
+      },
+      "store": {
+        "original": "surry hills"
+      }
+    }
+  },
+  "fulfillmentInfo": {
+    "tag": "checkProductAvailability"
+  },
+  "messages": [
+    {
+      "text": {
+        "text": [
+          "Thanks, we have 30 apple in stock at surry hills store. \n\nWas there anything else I can help you with?"
+        ],
+        "redactedText": [
+          "Thanks, we have 30 apple in stock at surry hills store. \n\nWas there anything else I can help you with?"
+        ]
+      }
+    }
+  ]
+}

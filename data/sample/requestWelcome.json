@@ -1,0 +1,15 @@
+{
+   "detectIntentResponseId":"66b9eed6-ca52-4938-9040-fe5fccb86409",
+   "intentInfo":{
+      "lastMatchedIntent":"projects/sodium-pathway-245607/locations/australia-southeast1/agents/e40f8920-76fa-4497-b25f-ee9eb4ef9b5b/intents/00000000-0000-0000-0000-000000000000"
+   },
+   "pageInfo":{
+      "currentPage":"projects/sodium-pathway-245607/locations/australia-southeast1/agents/e40f8920-76fa-4497-b25f-ee9eb4ef9b5b/flows/00000000-0000-0000-0000-000000000000/pages/START_PAGE"
+   },
+   "sessionInfo":{
+      "session":"projects/sodium-pathway-245607/locations/australia-southeast1/agents/e40f8920-76fa-4497-b25f-ee9eb4ef9b5b/sessions/eb9b8c-514-dda-98e-974b16e29"
+   },
+   "fulfillmentInfo":{
+      "tag":"Default Welcome Intent"
+   }
+}
