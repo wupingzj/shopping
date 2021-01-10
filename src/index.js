@@ -1,6 +1,7 @@
 const port = process.env.PORT || 8080;
 const CHECK_PRODUCT_AVAILABILITY = "checkProductAvailability";
 
+const pluralize = require("pluralize");
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
@@ -24,6 +25,7 @@ app.post("/webhook", (req, res) => {
     let product = parameters.product.original;
     let store = parameters.store.original;
     let count = randomInt(1, 100); // dummy stock availability
+    let countedProduct = pluralize(product, count, true);
 
     jsonResponse = {
       fulfillment_response: {
@@ -31,7 +33,7 @@ app.post("/webhook", (req, res) => {
           {
             text: {
               text: [
-                `Thanks, we have ${count} ${product} in stock at ${store}. 
+                `We have ${countedProduct} in stock at ${store}. 
 
               Was there anything else I can help you with?`
               ]
