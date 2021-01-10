@@ -31,7 +31,7 @@ app.post("/webhook", (req, res) => {
           {
             text: {
               text: [
-                `We have ${countedProduct} in stock at ${store}. 
+                `We have ${countedProduct} in stock at our ${store} store. 
 
               Was there anything else I can help you with?`
               ]
