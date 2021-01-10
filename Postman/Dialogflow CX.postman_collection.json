@@ -1,0 +1,109 @@
+{
+	"info": {
+		"_postman_id": "fc3c5819-e8a8-47c3-8f02-6c41041284cc",
+		"name": "Dialogflow CX",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "WolliesX-Ping",
+			"item": [
+				{
+					"name": "post webhook",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"detectIntentResponseId\": \"c0bf81a2-184c-4a95-855e-f7d168091cac\",\n  \"pageInfo\": {\n    \"currentPage\": \"projects/sodium-pathway-245607/locations/australia-southeast1/agents/e40f8920-76fa-4497-b25f-ee9eb4ef9b5b/flows/00000000-0000-0000-0000-000000000000/pages/3884a94c-7ddb-4779-b5f5-1e20f804fa76\"\n  },\n  \"sessionInfo\": {\n    \"session\": \"projects/sodium-pathway-245607/locations/australia-southeast1/agents/e40f8920-76fa-4497-b25f-ee9eb4ef9b5b/sessions/886fb7-451-b27-a7d-7ab29c54c\",\n    \"parameters\": {\n      \"name\": [\n        \"John\"\n      ],\n      \"nameProvided\": \"Y\",\n      \"product\": {\n        \"original\": \"apples\"\n      },\n      \"store\": {\n        \"original\": \"surry hills\"\n      }\n    }\n  },\n  \"fulfillmentInfo\": {\n    \"tag\": \"checkProductAvailability\"\n  },\n  \"messages\": [\n    {\n      \"text\": {\n        \"text\": [\n          \"Hi! This is a webhook response\"\n        ],\n        \"redactedText\": [\n          \"Hi! This is a webhook response\"\n        ]\n      }\n    },\n    {\n      \"text\": {\n        \"text\": [\n          \"Thanks, we have 30 apples in stock at surry hills store. \\n\\nWas there anything else I can help you with?\"\n        ],\n        \"redactedText\": [\n          \"Thanks, we have 30 apples in stock at surry hills store. \\n\\nWas there anything else I can help you with?\"\n        ]\n      }\n    }\n  ]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/webhook",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"webhook"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "healthcheck",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080"
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Heroku - post webhook",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"detectIntentResponseId\": \"c0bf81a2-184c-4a95-855e-f7d168091cac\",\n  \"pageInfo\": {\n    \"currentPage\": \"projects/sodium-pathway-245607/locations/australia-southeast1/agents/e40f8920-76fa-4497-b25f-ee9eb4ef9b5b/flows/00000000-0000-0000-0000-000000000000/pages/3884a94c-7ddb-4779-b5f5-1e20f804fa76\"\n  },\n  \"sessionInfo\": {\n    \"session\": \"projects/sodium-pathway-245607/locations/australia-southeast1/agents/e40f8920-76fa-4497-b25f-ee9eb4ef9b5b/sessions/886fb7-451-b27-a7d-7ab29c54c\",\n    \"parameters\": {\n      \"name\": [\n        \"John\"\n      ],\n      \"nameProvided\": \"Y\",\n      \"product\": {\n        \"original\": \"apples\"\n      },\n      \"store\": {\n        \"original\": \"surry hills\"\n      }\n    }\n  },\n  \"fulfillmentInfo\": {\n    \"tag\": \"checkProductAvailability\"\n  },\n  \"messages\": [\n    {\n      \"text\": {\n        \"text\": [\n          \"Hi! This is a webhook response\"\n        ],\n        \"redactedText\": [\n          \"Hi! This is a webhook response\"\n        ]\n      }\n    },\n    {\n      \"text\": {\n        \"text\": [\n          \"Thanks, we have 30 apples in stock at surry hills store. \\n\\nWas there anything else I can help you with?\"\n        ],\n        \"redactedText\": [\n          \"Thanks, we have 30 apples in stock at surry hills store. \\n\\nWas there anything else I can help you with?\"\n        ]\n      }\n    }\n  ]\n}"
+						},
+						"url": {
+							"raw": "https://pingshopping.herokuapp.com/webhook",
+							"protocol": "https",
+							"host": [
+								"pingshopping",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"webhook"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Heroku - healthcheck",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://pingshopping.herokuapp.com/",
+							"protocol": "https",
+							"host": [
+								"pingshopping",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
